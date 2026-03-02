@@ -30,7 +30,7 @@ html {
 
 /* ===== HEADER & NAVIGATION ===== */
 header {
-    position: sticky;
+    position: smooth;
     top: 0;
     z-index: 1000;
     background-color: var(--primary-color);
