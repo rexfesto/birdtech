@@ -3,73 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact BirdTech Systems - Get in touch with us via email, WhatsApp, or contact form.">
+    <meta name="keywords" content="contact, email, support, BirdTech">
+    <meta property="og:title" content="Contact - BirdTech Systems">
+    <meta property="og:description" content="Get in touch with BirdTech Systems today.">
+    <meta name="theme-color" content="#00bcd4">
+    <link rel="manifest" href="manifest.json">
     <title>Contact - BirdTech Systems</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Navigation -->
-    <header>
+    <header id="header">
         <nav class="navbar">
-            <div class="logo">BirdTech Systems</div>
-            <ul class="nav-links">
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#projects">Projects</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+            <div class="nav-container">
+                <div class="logo-section">
+                    <div class="logo">🐦 BirdTech</div>
+                    <span class="tagline">Technology • Innovation • Solutions</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <div class="nav-controls">
+                    <button id="darkModeToggle" class="theme-toggle" title="Toggle dark mode">🌙</button>
+                    <div class="burger">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
 
-    <!-- Contact Section -->
-    <section class="contact">
-        <h2>Get in Touch</h2>
-        <p>Have a project in mind? Let's discuss how we can help you.</p>
-        
-        <div class="contact-methods">
-            <a href="mailto:contact@birdtech.com" class="contact-btn email">
-                <span class="icon">📧</span>
-                <span class="label">Email</span>
-            </a>
-            <a href="https://wa.me/1234567890" class="contact-btn whatsapp" target="_blank">
-                <span class="icon">💬</span>
-                <span class="label">WhatsApp</span>
-            </a>
-            <a href="#contact-form" class="contact-btn form">
-                <span class="icon">📝</span>
-                <span class="label">Send Message</span>
-            </a>
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>We'd love to hear from you. Let's discuss how we can help.</p>
         </div>
+    </section>
 
-        <form id="contact-form" class="contact-form">
-            <div class="form-group">
-                <input type="text" placeholder="Your Name" required>
+    <!-- Contact Methods -->
+    <section class="contact-methods-section">
+        <div class="container">
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="method-icon">📧</div>
+                    <h3>Email</h3>
+                    <p>Send us an email and we'll respond within 24 hours.</p>
+                    <a href="mailto:melanin@festo.name.ng" class="btn btn-secondary">melanin@festo.name.ng</a>
+                </div>
+                <div class="contact-method">
+                    <div class="method-icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <p>Quick message via WhatsApp for immediate response.</p>
+                    <a href="https://wa.me/2349072918738" target="_blank" class="btn btn-secondary">Message Us</a>
+                </div>
+                <div class="contact-method">
+                    <div class="method-icon">📱</div>
+                    <h3>Phone</h3>
+                    <p>Call us for urgent matters or consultations.</p>
+                    <p class="phone-number">+234 907 291 8738</p>
+                </div>
             </div>
-            <div class="form-group">
-                <input type="email" placeholder="Your Email" required>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <h2>Send us a Message</h2>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service...</option>
+                            <option value="web-design">Web & Digital Solutions</option>
+                            <option value="graphic-design">Graphic Design & Branding</option>
+                            <option value="email-setup">Business Email Setup</option>
+                            <option value="domain">Domain & Hosting</option>
+                            <option value="tech-support">Technical Support</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+                <div id="formMessage" class="form-message"></div>
             </div>
-            <div class="form-group">
-                <input type="text" placeholder="Subject" required>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-items">
+                <div class="faq-item">
+                    <h3>How long does it take to get a response?</h3>
+                    <p>We aim to respond to all inquiries within 24 hours during business hours.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer custom solutions?</h3>
+                    <p>Yes! We provide tailored solutions based on your specific needs and budget.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What payment methods do you accept?</h3>
+                    <p>We accept bank transfers, online payments, and other digital payment methods. Contact us for details.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you provide ongoing support?</h3>
+                    <p>Yes, we offer continued support and maintenance for all our services.</p>
+                </div>
             </div>
-            <div class="form-group">
-                <input type="text" placeholder="What service are you interested in?" required>
-            </div>
-            <div class="form-group">
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send Message</button>
-        </form>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 BirdTech Systems. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>BirdTech Systems</h4>
+                <p>Technology • Innovation • Solutions</p>
+                <p>A technology company under the Diamond Birds group of companies.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Get In Touch</h4>
+                <p>📧 <a href="mailto:melanin@festo.name.ng">melanin@festo.name.ng</a></p>
+                <p>💬 <a href="https://wa.me/2349072918738" target="_blank">WhatsApp: +234 907 291 8738</a></p>
+                <p>⏰ Response within 24 hours</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon" title="Twitter">𝕏</a>
+                    <a href="#" class="social-icon" title="LinkedIn">in</a>
+                    <a href="#" class="social-icon" title="GitHub">GitHub</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BirdTech Systems. All rights reserved. | <a href="https://festo.name.ng">festo.name.ng</a></p>
+        </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>
