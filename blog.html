@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BirdTech Blog - Technology articles, digital skills, tutorials, and insights on innovation and digital transformation.">
+    <meta name="keywords" content="blog, technology, digital skills, tutorials, articles, tech news">
+    <meta property="og:title" content="Blog - BirdTech Systems">
+    <meta property="og:description" content="Read articles about technology, digital skills, and practical tutorials.">
+    <meta name="theme-color" content="#00bcd4">
+    <link rel="manifest" href="manifest.json">
+    <title>Blog - BirdTech Systems</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo-section">
+                    <div class="logo">🐦 BirdTech</div>
+                    <span class="tagline">Technology • Innovation • Solutions</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-controls">
+                    <button id="darkModeToggle" class="theme-toggle" title="Toggle dark mode">🌙</button>
+                    <div class="burger">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Blog Header -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Technology Articles & Tutorials</h1>
+            <p>Insights on digital innovation, technology trends, and practical digital skills.</p>
+        </div>
+    </section>
+
+    <!-- Blog Search & Filter -->
+    <section class="blog-controls">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search articles..." class="search-input">
+                <span class="search-icon">🔍</span>
+            </div>
+            <div class="filter-tags">
+                <button class="tag-btn active" data-tag="all">All Articles</button>
+                <button class="tag-btn" data-tag="tech">Tech</button>
+                <button class="tag-btn" data-tag="phones">Phones</button>
+                <button class="tag-btn" data-tag="websites">Websites</button>
+                <button class="tag-btn" data-tag="domains">Domains & Hosting</button>
+                <button class="tag-btn" data-tag="design">Graphic Design</button>
+                <button class="tag-btn" data-tag="skills">Digital Skills</button>
+                <button class="tag-btn" data-tag="finance">Finance & Apps</button>
+                <button class="tag-btn" data-tag="tutorials">Tutorials</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="featured-article">
+        <div class="container">
+            <div class="featured-card">
+                <div class="featured-content">
+                    <span class="featured-badge">Featured</span>
+                    <h2>The Future of Technology: How Digital Innovation Is Transforming the Way We Live and Work</h2>
+                    <p>Technology is no longer something reserved for large corporations or technology experts. It has become an essential part of everyday life...</p>
+                    <div class="article-meta">
+                        <span class="author">By BirdTech Systems</span>
+                        <span class="date">Published: Mar 15, 2026</span>
+                        <span class="reading-time">8 min read</span>
+                    </div>
+                    <a href="articles/future-of-technology.html" class="btn btn-secondary">Read Full Article →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="blog-grid">
+        <div class="container">
+            <div class="articles-list" id="articlesList">
+                <!-- Articles will be loaded here by JavaScript -->
+                <article class="article-card" data-tags="tech,skills,tutorials">
+                    <div class="article-image">
+                        <div class="image-placeholder">📱</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-tags">
+                            <span class="tag">Tech</span>
+                            <span class="tag">Skills</span>
+                        </div>
+                        <h3><a href="articles/digital-basics.html">Getting Started with Digital Tools: Essential Skills for Everyone</a></h3>
+                        <p>Learn the fundamental digital skills you need in today's technology-driven world. From email to cloud storage, we cover the basics.</p>
+                        <div class="article-meta">
+                            <span class="date">Mar 10, 2026</span>
+                            <span class="reading-time">5 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-tags="websites,domains">
+                    <div class="article-image">
+                        <div class="image-placeholder">🌐</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-tags">
+                            <span class="tag">Websites</span>
+                            <span class="tag">Domains</span>
+                        </div>
+                        <h3><a href="articles/build-website.html">How to Build Your Professional Website: A Complete Guide</a></h3>
+                        <p>Everything you need to know about creating and launching a professional website for your business or personal brand in 2026.</p>
+                        <div class="article-meta">
+                            <span class="date">Mar 5, 2026</span>
+                            <span class="reading-time">10 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-tags="design,branding">
+                    <div class="article-image">
+                        <div class="image-placeholder">🎨</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-tags">
+                            <span class="tag">Graphic Design</span>
+                            <span class="tag">Branding</span>
+                        </div>
+                        <h3><a href="articles/branding-basics.html">Branding Essentials: Creating a Visual Identity That Stands Out</a></h3>
+                        <p>Discover the key principles of professional branding and how to create a visual identity that represents your business effectively.</p>
+                        <div class="article-meta">
+                            <span class="date">Feb 28, 2026</span>
+                            <span class="reading-time">7 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-tags="finance,apps">
+                    <div class="article-image">
+                        <div class="image-placeholder">💰</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-tags">
+                            <span class="tag">Finance & Apps</span>
+                            <span class="tag">Tutorials</span>
+                        </div>
+                        <h3><a href="articles/digital-payments.html">Digital Payments 101: Safe Ways to Send and Receive Money Online</a></h3>
+                        <p>Learn about secure digital payment methods, popular apps, and best practices for managing your money online safely.</p>
+                        <div class="article-meta">
+                            <span class="date">Feb 20, 2026</span>
+                            <span class="reading-time">6 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-tags="skills,tutorials">
+                    <div class="article-image">
+                        <div class="image-placeholder">📧</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-tags">
+                            <span class="tag">Digital Skills</span>
+                            <span class="tag">Tutorials</span>
+                        </div>
+                        <h3><a href="articles/email-mastery.html">Email Management: Tips for Staying Organized and Productive</a></h3>
+                        <p>Master your email workflow with practical tips for organization, productivity, and professional communication in 2026.</p>
+                        <div class="article-meta">
+                            <span class="date">Feb 15, 2026</span>
+                            <span class="reading-time">5 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card" data-tags="phones,tech">
+                    <div class="article-image">
+                        <div class="image-placeholder">📱</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-tags">
+                            <span class="tag">Phones</span>
+                            <span class="tag">Tech</span>
+                        </div>
+                        <h3><a href="articles/smartphone-tips.html">Smartphone Tips & Tricks: Get More From Your Device</a></h3>
+                        <p>Unlock hidden features and learn practical tips to maximize your smartphone's capabilities and improve your daily productivity.</p>
+                        <div class="article-meta">
+                            <span class="date">Feb 10, 2026</span>
+                            <span class="reading-time">6 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>BirdTech Systems</h4>
+                <p>Technology • Innovation • Solutions</p>
+                <p>A technology company under the Diamond Birds group of companies.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Get In Touch</h4>
+                <p>📧 <a href="mailto:melanin@festo.name.ng">melanin@festo.name.ng</a></p>
+                <p>💬 <a href="https://wa.me/2349072918738" target="_blank">WhatsApp: +234 907 291 8738</a></p>
+                <p>⏰ Response within 24 hours</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon" title="Twitter">𝕏</a>
+                    <a href="#" class="social-icon" title="LinkedIn">in</a>
+                    <a href="#" class="social-icon" title="GitHub">GitHub</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BirdTech Systems. All rights reserved. | <a href="https://festo.name.ng">festo.name.ng</a></p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Festo Tools - Free online utilities including image compressor, QR code generator, password generator, and more.">
+    <meta name="keywords" content="tools, free tools, online utilities, image compressor, QR code, password generator">
+    <meta property="og:title" content="Festo Tools - Useful Online Utilities">
+    <meta property="og:description" content="Free online tools to help with daily tasks and digital work.">
+    <meta name="theme-color" content="#00bcd4">
+    <link rel="manifest" href="manifest.json">
+    <title>Festo Tools - Online Utilities</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo-section">
+                    <div class="logo">🐦 BirdTech</div>
+                    <span class="tagline">Technology • Innovation • Solutions</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="tools.html" class="active">Tools</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-controls">
+                    <button id="darkModeToggle" class="theme-toggle" title="Toggle dark mode">🌙</button>
+                    <div class="burger">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Festo Tools</h1>
+            <p>Free online utilities to help with your digital tasks.</p>
+        </div>
+    </section>
+
+    <!-- Tools Grid -->
+    <section class="tools-section">
+        <div class="container">
+            <div class="tools-grid">
+                <!-- Image Compressor -->
+                <div class="tool-card">
+                    <div class="tool-icon">🖼️</div>
+                    <h3>Image Compressor</h3>
+                    <p>Compress images without losing quality. Reduce file sizes for web and email.</p>
+                    <button class="btn btn-secondary" onclick="scrollToTool('image-compressor')">Open Tool</button>
+                </div>
+
+                <!-- QR Code Generator -->
+                <div class="tool-card">
+                    <div class="tool-icon">📱</div>
+                    <h3>QR Code Generator</h3>
+                    <p>Generate custom QR codes for URLs, text, phone numbers, and more.</p>
+                    <button class="btn btn-secondary" onclick="scrollToTool('qr-generator')">Open Tool</button>
+                </div>
+
+                <!-- Password Generator -->
+                <div class="tool-card">
+                    <div class="tool-icon">🔐</div>
+                    <h3>Password Generator</h3>
+                    <p>Create strong, random passwords for your accounts and security.</p>
+                    <button class="btn btn-secondary" onclick="scrollToTool('password-generator')">Open Tool</button>
+                </div>
+
+                <!-- Age Calculator -->
+                <div class="tool-card">
+                    <div class="tool-icon">🎂</div>
+                    <h3>Age Calculator</h3>
+                    <p>Calculate your exact age in years, months, and days.</p>
+                    <button class="btn btn-secondary" onclick="scrollToTool('age-calculator')">Open Tool</button>
+                </div>
+
+                <!-- Unit Converter -->
+                <div class="tool-card">
+                    <div class="tool-icon">📐</div>
+                    <h3>Unit Converter</h3>
+                    <p>Convert between different units of measurement easily.</p>
+                    <button class="btn btn-secondary" onclick="scrollToTool('unit-converter')">Open Tool</button>
+                </div>
+
+                <!-- Nigerian Currency Calculator -->
+                <div class="tool-card">
+                    <div class="tool-icon">₦</div>
+                    <h3>Currency Calculator</h3>
+                    <p>Convert Nigerian Naira to other currencies and vice versa.</p>
+                    <button class="btn btn-secondary" onclick="scrollToTool('currency-calculator')">Open Tool</button>
+                </div>
+
+                <!-- Color Palette Generator -->
+                <div class="tool-card">
+                    <div class="tool-icon">🎨</div>
+                    <h3>Color Palette Generator</h3>
+                    <p>Generate beautiful color palettes for design and branding.</p>
+                    <button class="btn btn-secondary" onclick="scrollToTool('color-generator')">Open Tool</button>
+                </div>
+
+                <!-- Text Statistics -->
+                <div class="tool-card">
+                    <div class="tool-icon">📝</div>
+                    <h3>Text Statistics</h3>
+                    <p>Analyze word count, character count, and reading time of any text.</p>
+                    <button class="btn btn-secondary" onclick="scrollToTool('text-stats')">Open Tool</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Implementation Section -->
+    <section class="tools-implementation">
+        <div class="container">
+            <!-- Image Compressor -->
+            <div class="tool-implementation" id="image-compressor">
+                <h2>Image Compressor</h2>
+                <p>Reduce image file sizes while maintaining quality.</p>
+                <div class="tool-content">
+                    <input type="file" id="imageInput" accept="image/*" class="file-input">
+                    <div id="imagePreview" class="image-preview"></div>
+                    <div id="compressionResult" class="compression-result"></div>
+                </div>
+            </div>
+
+            <!-- QR Code Generator -->
+            <div class="tool-implementation" id="qr-generator">
+                <h2>QR Code Generator</h2>
+                <p>Create QR codes for any URL or text.</p>
+                <div class="tool-content">
+                    <input type="text" id="qrInput" placeholder="Enter URL or text" class="input-field">
+                    <button onclick="generateQR()" class="btn btn-secondary">Generate QR Code</button>
+                    <div id="qrResult" class="qr-result"></div>
+                </div>
+            </div>
+
+            <!-- Password Generator -->
+            <div class="tool-implementation" id="password-generator">
+                <h2>Password Generator</h2>
+                <p>Create strong, secure passwords.</p>
+                <div class="tool-content">
+                    <div class="password-options">
+                        <label><input type="checkbox" id="pwdUppercase" checked> Uppercase</label>
+                        <label><input type="checkbox" id="pwdLowercase" checked> Lowercase</label>
+                        <label><input type="checkbox" id="pwdNumbers" checked> Numbers</label>
+                        <label><input type="checkbox" id="pwdSymbols" checked> Symbols</label>
+                    </div>
+                    <div class="password-length">
+                        <label>Password Length: <input type="number" id="pwdLength" value="16" min="8" max="32"></label>
+                    </div>
+                    <button onclick="generatePassword()" class="btn btn-secondary">Generate Password</button>
+                    <div id="passwordResult" class="password-result"></div>
+                </div>
+            </div>
+
+            <!-- Age Calculator -->
+            <div class="tool-implementation" id="age-calculator">
+                <h2>Age Calculator</h2>
+                <p>Calculate your exact age.</p>
+                <div class="tool-content">
+                    <label>Date of Birth: <input type="date" id="dobInput" class="input-field"></label>
+                    <button onclick="calculateAge()" class="btn btn-secondary">Calculate Age</button>
+                    <div id="ageResult" class="age-result"></div>
+                </div>
+            </div>
+
+            <!-- Unit Converter -->
+            <div class="tool-implementation" id="unit-converter">
+                <h2>Unit Converter</h2>
+                <p>Convert between different units.</p>
+                <div class="tool-content">
+                    <div class="converter-group">
+                        <div>
+                            <label>From: <input type="number" id="unitValue" placeholder="Value" class="input-field"></label>
+                            <select id="unitFrom" class="input-field">
+                                <option value="m">Meters</option>
+                                <option value="km">Kilometers</option>
+                                <option value="mi">Miles</option>
+                                <option value="ft">Feet</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>To: <select id="unitTo" class="input-field">
+                                <option value="m">Meters</option>
+                                <option value="km">Kilometers</option>
+                                <option value="mi">Miles</option>
+                                <option value="ft">Feet</option>
+                            </select></label>
+                        </div>
+                    </div>
+                    <button onclick="convertUnits()" class="btn btn-secondary">Convert</button>
+                    <div id="conversionResult" class="conversion-result"></div>
+                </div>
+            </div>
+
+            <!-- Currency Calculator -->
+            <div class="tool-implementation" id="currency-calculator">
+                <h2>Currency Calculator</h2>
+                <p>Convert between currencies (demo rates).</p>
+                <div class="tool-content">
+                    <div class="converter-group">
+                        <div>
+                            <label>Amount: <input type="number" id="currencyAmount" placeholder="Amount" class="input-field"></label>
+                        </div>
+                        <div>
+                            <label>From: <select id="currencyFrom" class="input-field">
+                                <option value="NGN">Nigerian Naira (₦)</option>
+                                <option value="USD">US Dollar ($)</option>
+                                <option value="EUR">Euro (€)</option>
+                                <option value="GBP">British Pound (£)</option>
+                            </select></label>
+                        </div>
+                        <div>
+                            <label>To: <select id="currencyTo" class="input-field">
+                                <option value="USD">US Dollar ($)</option>
+                                <option value="NGN">Nigerian Naira (₦)</option>
+                                <option value="EUR">Euro (€)</option>
+                                <option value="GBP">British Pound (£)</option>
+                            </select></label>
+                        </div>
+                    </div>
+                    <button onclick="convertCurrency()" class="btn btn-secondary">Convert</button>
+                    <div id="currencyResult" class="currency-result"></div>
+                </div>
+            </div>
+
+            <!-- Color Palette Generator -->
+            <div class="tool-implementation" id="color-generator">
+                <h2>Color Palette Generator</h2>
+                <p>Generate beautiful color palettes.</p>
+                <div class="tool-content">
+                    <button onclick="generatePalette()" class="btn btn-secondary">Generate Palette</button>
+                    <div id="paletteResult" class="palette-result"></div>
+                </div>
+            </div>
+
+            <!-- Text Statistics -->
+            <div class="tool-implementation" id="text-stats">
+                <h2>Text Statistics</h2>
+                <p>Analyze your text.</p>
+                <div class="tool-content">
+                    <textarea id="textInput" class="input-field" placeholder="Paste your text here..." rows="6"></textarea>
+                    <button onclick="analyzeText()" class="btn btn-secondary">Analyze</button>
+                    <div id="statsResult" class="stats-result"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>BirdTech Systems</h4>
+                <p>Technology • Innovation • Solutions</p>
+                <p>A technology company under the Diamond Birds group of companies.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Get In Touch</h4>
+                <p>📧 <a href="mailto:melanin@festo.name.ng">melanin@festo.name.ng</a></p>
+                <p>💬 <a href="https://wa.me/2349072918738" target="_blank">WhatsApp: +234 907 291 8738</a></p>
+                <p>⏰ Response within 24 hours</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon" title="Twitter">𝕏</a>
+                    <a href="#" class="social-icon" title="LinkedIn">in</a>
+                    <a href="#" class="social-icon" title="GitHub">GitHub</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BirdTech Systems. All rights reserved. | <a href="https://festo.name.ng">festo.name.ng</a></p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/tools.js"></script>
+</body>
+</html>
